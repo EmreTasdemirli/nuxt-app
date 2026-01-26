@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
+    "test": "vitest",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -22,7 +23,10 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@nuxt/test-utils": "^3.23.0",
+    "jsdom": "^27.4.0",
     "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
     "vue-tsc": "^3.2.4"
   },
   "engines": {
