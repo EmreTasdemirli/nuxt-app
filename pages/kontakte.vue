@@ -32,6 +32,10 @@
       Fehler beim Senden. Bitte versuchen Sie es erneut.
     </div>
   </div>
+
+  <AppButton @click="handleDelete">
+    <span class="mr-2">🗑️</span> Löschen
+  </AppButton>
 </template>
 
 <script setup lang="ts">
@@ -52,5 +56,9 @@ const handleSubmit = async () => {
   } else {
     formStatus.value = "error";
   }
+};
+
+const handleDelete = () => {
+  console.log("Eintrag wurde gelöscht!");
 };
 </script>
