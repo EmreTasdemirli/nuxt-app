@@ -5,25 +5,25 @@ const isDarkMode = ref(false);
 
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;
-  // Status im Browser speichern, damit er beim Neuladen erhalten bleibt
   if (isDarkMode.value) {
+    document.documentElement.classList.add("dark");
     localStorage.setItem("darkMode", "enabled");
   } else {
+    document.documentElement.classList.remove("dark");
     localStorage.setItem("darkMode", "disabled");
   }
 };
 
 onMounted(() => {
-  // Beim Laden prüfen, was im Speicher steht
   if (localStorage.getItem("darkMode") === "enabled") {
     isDarkMode.value = true;
+    document.documentElement.classList.add("dark");
   }
 });
 </script>
 
 <template>
-  <div>
-    <!-- Ihre globale Navigationsleiste mit Links -->
+  <div class="dark:bg-gray-900 dark:text-white min-h-screen">
     <header style="background-color: #333; padding: 1rem; color: white">
       <NuxtLink to="/" style="margin-right: 1rem; color: white"
         >Startseite</NuxtLink
@@ -38,18 +38,16 @@ onMounted(() => {
 
       <button
         @click="toggleDarkMode"
-        class="p-2 ml-4 bg-gray-300 dark:bg-gray-700 rounded"
+        class="p-2 ml-4 bg-gray-300 rounded"
+        style="color: black"
       >
         {{ isDarkMode ? "Light Mode ☀️" : "Dark Mode 🌙" }}
       </button>
     </header>
 
-    <!-- Der Inhalt der jeweiligen Seite (index.vue, about.vue, etc.) wird hier geladen -->
     <main style="padding: 1rem">
       <slot />
     </main>
-
-    <!-- Optional: Globaler Footer -->
     <footer>
       <p>&copy; 2026 Mein Projekt</p>
     </footer>
