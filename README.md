@@ -2,7 +2,7 @@
 
 FinancePulse ist eine performante Fullstack-Webanwendung zur Verwaltung persönlicher Finanzen. Dieses Projekt dient als Showcase für moderne Web-Architektur mit **Nuxt 3/4**, **TypeScript** und **Enterprise-State-Management**.
 
-[🚀 Live Demo ansehen](https://dein-projekt.vercel.app) | [📂 Dokumentation](https://nuxt.com)
+[📂 Dokumentation](https://nuxt.com)
 
 ## 🎯 Key Features
 
