@@ -43,3 +43,23 @@ FinancePulse ist eine performante Fullstack-Webanwendung zur Verwaltung persönl
    ```bash
    npm run build
    ```
+
+## 🐳 Dockerisierung
+
+Dieses Projekt ist vollständig containerisiert, um eine konsistente Entwicklungs- und Produktionsumgebung zu gewährleisten.
+
+### Ausführung mit Docker
+
+1. **Docker Image erstellen**  
+   Verwende den folgenden Befehl, um das Image basierend auf dem bereitgestellten `Dockerfile` zu bauen:
+
+   ```bash
+   docker build -t nuxt-app .
+
+   ```
+
+2. **Container starten**
+   Starte die Anwendung auf Port 3000:
+   ```bash
+   docker run -p 3000:3000 nuxt-app
+   ```
